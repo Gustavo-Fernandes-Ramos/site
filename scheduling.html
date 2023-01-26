@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>agendamento</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/nav-bar.css">
+    <link rel="stylesheet" href="css/info-panel.css">
+    <link rel="stylesheet" href="css/scheduling/scheduling.css">
+    <link rel="stylesheet" href="css/scheduling/form/form-section.css">
+    <link rel="stylesheet" href="css/scheduling/form/form-title.css">
+    <link rel="stylesheet" href="css/scheduling/form/form-buttons.css">
+    <link rel="stylesheet" href="css/scheduling/viewer.css">
+</head>
+
+<body>
+
+    <header class="menu">
+        <div class="menu-container">
+            <h1 class="brand"><a class="brand-link" href="home.html">Center <span class="brand-span">Clínica</span></a></h1>
+
+            <nav class="nav-bar">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="home.html">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="scheduling.html">consultas/exames</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clinics.html">unidades</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="info">
+            <div class="info-panel">
+                <h1 class="info-title">Agende uma consulta!</h1>
+                <p class="info-message">Preencha todos os campos abaixo, entraremos em contato o mais breve possível!</p> 
+            </div>
+        </section>
+
+        <section class="scheduling">
+            <form class="form scheduling-item" action="" method="POST">
+
+                <section class="form-header">
+                    <h2 class="form-title">marcar consulta</h2>
+                    <p class="form-subtitle">preencha com seus dados...</p>
+                </section>
+
+                <section class="form-section">
+                    <p class="field">
+                        <label class="field-label" for="input-username"><span>nome</span><span aria-label="required">*</span></label>
+                        <input class="field-input" id="input-username" type="text" name="username" required autofocus placeholder="Digite seu nome completo">
+                    </p>
+    
+                    <p class="field">
+                        <label class="field-label" for="input-birthdate"><span>data de nascimento</span><span aria-label="required">*</span></label>
+                        <input class="field-input" id="input-birthdate" type="date" required>
+                    </p>
+                
+                    <fieldset class="fieldset">
+                        <legend class="field-legend">sexo</legend>
+                        <ul class="fieldset-list">
+                            <li>
+                                <label class="field-label" for="male">masculino</label>
+                                <input id="male" type="radio" name="gender" value="male">
+                            </li>
+                            <li>
+                                <label class="field-label" for="female">feminino</label>
+                                <input id="female" type="radio" name="gender" value="female">
+                            </li>
+                        </ul>
+                    </fieldset>
+    
+                    <fieldset class="fieldset">
+                        <legend class="field-legend">opção de contato</legend>
+                        <ul class="fieldset-list">
+                            <li>
+                                <label class="field-label" for="email-radio">email </label>
+                                <input id="email-radio" type="radio" name="contact-radio" value="email">
+                            </li>
+                            <li>
+                                <label class="field-label" for="phone-radio">telefone</label>
+                                <input id="phone-radio" type="radio" name="contact-radio" value="phone">
+                            </li>
+                            <li>
+                                <label class="field-label" for="whatsapp-radio">whatsapp</label>
+                                <input id="whatsapp-radio" type="radio" name="contact-radio" value="whatsapp">
+                            </li>
+                        </ul>
+                    </fieldset>
+                
+                    <p class="field">
+                        <label class="field-label" for="input-email">email </label>
+                        <input class="field-input" id="input-email" type="email" name="email" required placeholder="Digite seu e-mail" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}">
+                    </p>
+    
+                    <p class="field">
+                        <label class="field-label" for="input-phone">telefone </label>
+                        <input class="field-input" id="input-phone" type="tel" name="phone" required placeholder="Digite seu telefone" pattern="">
+                    </p> 
+                </section>
+                
+                <section class="form-section">  
+                    <p class="field">
+                        <label class="field-label" for="input-consult-type">Tipo de consulta</label>
+                        <select class="field-input" id="input-consult-type" name="consult-type">
+                            <option value="_blank"></option>
+                            <option value="psych-evaluation">avaliação psicológica</option>
+                        </select>
+                    </p>
+
+                    <p class="field">
+                        <label class="field-label" for="input-consult-date">Data da consulta</label>
+                        <input class="field-input" id="input-consult-date" type="date" required>
+                    </p>
+
+                    <p class="field">
+                        <label class="field-label" for="input-consult-time">Horário da consulta</label>
+                        <select class="field-input" id="input-consult-time" name="consult-time">
+                            <option value="_blank"></option>
+                            <option value="08:00">08:00</option>
+                        </select>
+                    </p>
+
+                    <p class="field">
+                        <label class="field-label" for="input-consult-time">pagamento</label>
+                        <select class="field-input" id="input-consult-time" name="consult-time">
+                            <option value="_blank"></option>
+                            <option value="private"><span>particular</span><span>(R$150,00)</span></option>
+                            <option value="private"><span>plano de saúde</span><span>(SulAmerica)</span></option>
+                        </select>
+                    </p>
+                </section>
+                
+                <section class="form-buttons">
+                    <input class="button-submit" id="button-submit" type="button" name="submit" value="agendar">
+                    <input class="button-reset" id="button-reset" type="reset" name="reset" value="resetar">
+                </section>
+
+            </form>
+
+            <div class="viewer scheduling-item">
+
+                <div class="viewer-item">
+                    <div class="viewer-image"></div>
+
+                    <ul id="viewer-user" class="viewer-info">
+                        <li><p>Aderbal José Neto</p></li>
+                        <li><p>53 anos</p></li>
+                        <li><p>Masculino</p></li>
+                        <!--<li><p>aderbalzinho73@gmail.com</p></li>-->
+                        <li><p>+55 11 98534-5678</p></li>
+                    </ul>
+                </div>
+
+                <div class="viewer-item">
+                    <div class="viewer-image"></div>
+
+                    <ul id="viewer-expert" class="viewer-info">
+                        <li><p>Doutora Jenesca Pera Romulus</p></li>
+                        <li><p>Especialista em Psiquiatria</p></li>
+                        <li><p>Agendado consulta Psiquiátrica</p></li>
+                        <li><p>dia 18/02/2023 às 14:00 horas</p></li>
+                        <li><p>Rua Heitor Penteado 616, 2º andar sala 13</p></li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+    <script src="../js/index.js"></script>
+
+</body>
+</html>

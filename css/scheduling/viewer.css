@@ -1,0 +1,31 @@
+.viewer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: .3rem solid white;
+}
+
+.viewer-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15px;
+}
+
+.viewer-image{
+    background-image: url('../../img/roberta.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    border: .3rem solid white;
+    height: 150px;
+    width: 150px;
+}
+
+.viewer-info{
+    text-align: center;
+    font-size: 1.2rem;
+}
